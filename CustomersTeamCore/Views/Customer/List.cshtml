@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Customers";
+}
+
+<h1>Customers</h1>
+
+<input type="hidden" name="CanEdit" id="can-edit" value="@ViewBag.CanEdit" />
+
+<div class="row">
+
+    <div class="col-md-10">
+        <p>
+            <a asp-action="Create">Create</a>
+        </p>
+        <table id="customers-table" class="table">
+            <thead>
+                <tr>
+                    <th><input id="select-header" type="checkbox" /></th>
+                    <th><a id="login-hearer" class="sort-header" data-sort="none" href="">Login</a></th>
+                    <th><a id="name-header" class="sort-header" data-sort="none" href="">Name</a></th>
+                    <th><a id="mail-header" class="sort-header" data-sort="none" href="">Email</a></th>
+                    <th><a id="phone-header" class="sort-header" data-sort="none" href="">Phone</a></th>
+                    <th>Active</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <ul id="pagination-list" class="pagination"></ul>
+    </div>
+
+    <div class="col-md-2" style="margin-top:20px">
+        <div class="row" style="margin-bottom:25px">
+            <div class="col-md-12" style="font-weight:bold; color:lightblue;">Stats</div>
+            <div class="col-md-6">Total items:</div>
+            <div id="total-count" class="col-md-6"></div>
+        </div>
+       <div class="row">
+           <div class="col-md-12" style="font-weight:bold; color:lightblue;">Search</div>
+           <form id="search-form" class="col-md-12">
+               <div class="form-group" style="text-align:right;">
+                   <input id="search-input" class="form-control" type="text" style="margin-bottom:5px"/>
+                   <input id="search-button" type="submit" value="Search" class="btn btn-primary" />
+               </div>
+           </form>
+       </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/app.js"></script>
+}

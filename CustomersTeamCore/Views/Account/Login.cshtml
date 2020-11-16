@@ -1,0 +1,29 @@
+﻿@{
+    @model App.Models.LoginViewModel
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" method="post">
+            <div class="summary-errors" asp-validation-summary="All"></div>
+            <input asp-for="Login" placeholder="Username" />
+            <div class="login-validation-message">
+                <span asp-validation-for="Login" class="label-error"></span>
+            </div>
+            <input asp-for="Password" placeholder="Password" />
+            <div class="login-validation-message">
+                <span asp-validation-for="Password" class="label-error"></span>
+            </div>
+            <button>Login</button>
+        </form>
+    </div>
+</div>
+
+@section css {
+    <link rel="stylesheet" href="~/css/login.css" />
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
