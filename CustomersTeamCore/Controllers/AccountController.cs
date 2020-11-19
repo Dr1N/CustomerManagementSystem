@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using App.Constants;
 using App.Enums;
 using App.Models;
-using App.Service.Login;
+using CustomersTeamCore.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

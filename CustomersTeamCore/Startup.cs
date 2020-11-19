@@ -1,8 +1,8 @@
 using App.Mapper;
 using App.Models;
 using App.Service.Customers;
-using App.Service.Login;
 using App.Service.Password;
+using CustomersTeamCore.Services;
 using DAL.Mapper;
 using DAL.Models;
 using DAL.Repository;
